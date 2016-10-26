@@ -137,3 +137,13 @@ required: True
 PLEASE UPDATE DOCUMENTATION
 
 
+[float]
+=== path
+
+type: text
+
+required: True
+
+Just a string with a path.
+
+

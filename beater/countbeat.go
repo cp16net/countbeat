@@ -26,7 +26,7 @@ func New(b *beat.Beat, cfg *common.Config) (beat.Beater, error) {
 	}
 
 	bt := &Countbeat{
-		done: make(chan struct{}),
+		done:   make(chan struct{}),
 		config: config,
 	}
 	return bt, nil
@@ -49,6 +49,7 @@ func (bt *Countbeat) Run(b *beat.Beat) error {
 			"@timestamp": common.Time(time.Now()),
 			"type":       b.Name,
 			"counter":    counter,
+			"path":       bt.config.Path,
 		}
 		bt.client.PublishEvent(event)
 		logp.Info("Event sent")

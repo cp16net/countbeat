@@ -73,6 +73,10 @@
             }
           }
         },
+        "path": {
+          "norms": false,
+          "type": "text"
+        },
         "tags": {
           "ignore_above": 1024,
           "type": "keyword"
