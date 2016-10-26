@@ -22,3 +22,11 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+/.idea
+/build
+
+.DS_Store
+/countbeat
+/countbeat.test
+*.pyc
